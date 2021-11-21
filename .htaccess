@@ -1,0 +1,26 @@
+AddDefaultCharset UTF-8
+DefaultLanguage ru-RU
+
+Options -Indexes
+
+ErrorDocument 403 /403
+ErrorDocument 404 /404
+
+RewriteEngine On
+
+#Основные ссылки
+RewriteRule ^register /index.php?mode=register [L,QSA]
+RewriteRule ^auth /index.php?mode=auth [L,QSA]
+RewriteRule ^restore /index.php?mode=restore [L,QSA]
+
+#Профиль
+RewriteRule ^profile /index.php?mode=profile [L,QSA]
+
+#Новости
+RewriteRule ^news/([0-9]*) /index.php?mode=news&id=$1 [L,QSA]
+
+#Cервера
+RewriteRule ^servers/([0-9]*) /index.php?mode=servers&server_id=$1 [L,QSA]
+
+#Cтатические страницы
+RewriteRule ^page/([^/]*)(/?) /index.php?mode=page&page=$1 [L,QSA]

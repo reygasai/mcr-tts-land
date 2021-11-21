@@ -1,0 +1,67 @@
+<div class="card">
+	<div class="card-header">
+		<div class="d-flex justify-content-between align-items-center">
+			<div>
+				<h6 class="mb-0"><i class="fas fa-server"></i> Управление серверами</h6>
+			</div>
+		</div>
+	</div>
+</div>
+
+<form method="post" action="{admin_url}&do=monitoring&op=delete">
+	<div class="card">
+		<div class="table-responsive">
+			<table class="table table-striped">
+				<thead class="table-light">
+					<tr>
+						<th><a href="#" class="sort-trigger" data-field="id" data-order="desc">#</a></th>
+						<th><a href="#" class="sort-trigger" data-field="title" data-order="desc">Название сервера</a></th>
+						<th><a href="#" class="sort-trigger" data-field="address" data-order="desc">Адрес сервера</a></th>
+						<th><a href="#" class="sort-trigger" data-field="status" data-order="status">Статус сервера</a></th>
+						<th><a href="#" class="sort-trigger">Онлайн сервера</a></th>
+						<th class="action float-right">
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="check-input" data-action="check-all">
+								<label class="custom-control-label" for="check-input"></label>
+							</div>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					{servers}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="card px-2 py-2 d-flex flex-row align-items-center justify-content-between">
+		<div class="left-act">{pagination}</div>
+		<div class="right-act">
+			<div class="input-group">
+				<input type="text"class="form-control form-control-sm mr-0" placeholder="Введите параметны для поиска" data-target="search-input">
+				<button type="button" class="btn btn-success adm-search btn-sm" data-action="search"><i class="fa fa-search"></i></button>
+				<div class="input-group-btn">
+					<a href="{admin_url}&do=monitoring&op=add" class="btn btn-animated btn-success btn-animated-x btn-sm">
+						<span class="btn-inner--visible">Добавить</span>
+						<span class="btn-inner--hidden">
+							<i class="fa fa-plus"></i>
+						</span>
+					</a>
+					<a data-link="{admin_url}&do=monitoring&op=edit&id=" href="#" class="btn btn-animated btn-info btn-animated-x btn-sm" data-action="edit">
+						<span class="btn-inner--visible">Редактировать</span>
+						<span class="btn-inner--hidden">
+							<i class="fa fa-pencil"></i>
+						</span>
+					</a>
+					<button type="button" data-text="Удалить данные сервера из списка?" name="delete" class="btn btn-animated btn-danger btn-animated-x btn-sm" data-action="remove">
+						<span class="btn-inner--visible">Удалить</span>
+						<span class="btn-inner--hidden">
+							<i class="far fa-trash-alt"></i>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</form>

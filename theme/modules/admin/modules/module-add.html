@@ -1,0 +1,37 @@
+<div class="card">
+	<div class="card-header">
+		<div class="d-flex justify-content-between align-items-center">
+			<div>
+				<h6 class="mb-0"><i class="fas fa-sitemap"></i> {page}</h6>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="card">
+	<div class="card-body">
+		<form method="post">
+			<h3>{name}</h3>
+			<small>- {desc}</small>
+			<hr>
+			<address>
+				<dl>
+					<dt>Автор модуля: {author}</dt>
+					<dt>Сайт разработчика: <a href="{site}" target="_blank"></a>{site}</dt>
+					<dt>Электронная почта: <a href="mailto:{email}">{email}</a></dt>
+					<dd>Версия модуля: {version}</dd>
+				</dl>
+			</address>
+		
+			<div class="form-group">
+				<label for="inputStatus">Cтатус модуля</label>
+				<select name="status" class="form-control" id="inputStatus">
+					<option value="0">Выключен</option>
+					<option value="1" {status}>Активирован</option>
+				</select>
+			</div>
+		
+			<button type="submit" class="btn btn-success btn-block" name="submit">Cохранить настроки для модуля</button>
+		</form>		
+	</div>		
+</div>

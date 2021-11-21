@@ -1,0 +1,96 @@
+<div class="card">
+	<div class="card-header">
+		<div class="d-flex justify-content-between align-items-center">
+			<div>
+				<h6 class="mb-0"><i class="fas fa-tools"></i> Функциональные настройки</h6>
+			</div>
+		</div>
+	</div>
+</div>
+
+<nav class="nav nav-pills nav-pills-icon nav-justified mb-4">
+    <a class="nav-item nav-link py-3 bg-secondary-light" href="{admin_url}&do=settings&op=main">
+        <span class="d-block">
+			<i class="fas fa-sliders-h fa-2x"></i>
+        </span>
+        <span class="d-none d-sm-block mt-2">Основные</span>
+    </a>
+    <a class="nav-item nav-link py-3 bg-secondary-light" href="{admin_url}&do=settings&op=pagin">
+        <span class="d-block">
+            <i class="fas fa-ellipsis-h fa-2x"></i>
+        </span>
+        <span class="d-none d-sm-block mt-2">Пагинация</span>
+    </a>
+    <a class="nav-item nav-link py-3 bg-secondary-light" href="{admin_url}&do=settings&op=mail">
+        <span class="d-block">
+            <i class="fas fa-mail-bulk fa-2x"></i>
+        </span>
+        <span class="d-none d-sm-block mt-2">Почта</span>
+	</a>
+	<a class="nav-item nav-link py-3 bg-dark-light active " href="{admin_url}&do=settings&op=functions">
+        <span class="d-block">
+            <i class="fas fa-tools fa-2x"></i>
+        </span>
+        <span class="d-none d-sm-block mt-2">Функциональные</span>
+    </a>
+</nav>
+<form method="post">
+	<div class="card">
+		<div class="card-body">
+			<legend class="mb-4">Основные настройки</legend>
+			<div class="row">
+				<div class="col-md-8">
+					<div class="form-group">
+						<label for="input_close" class="form-control-label">Технические работы</label>
+						<select name="close" class="form-control" id="input_close">
+							<option value="0">Нет</option>
+							<option value="1" {func_close__select}>Включить сайт на технические работы</option>
+						</select>
+					</div>	
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label for="input_close_time" class="form-control-label">Время до конца техниеских работ</label>
+						<input type="text" name="close_time" class="form-control" id="input_close_time" value="{func_close_time}">
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="input_breadcrumbs" class="form-control-label">Хлебные крошки</label>
+				<select name="breadcrumbs" class="form-control" id="input_breadcrumbs">
+					<option value="0">Нет</option>
+					<option value="1" {func_breadcrumbs__select}>Да</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label for="input_input_reglimit" class="form-control-label">Количество аккаунтов на 1 IP</label>
+				<input type="number" name="input_reglimit" class="form-control" id="input_input_reglimit" value="{func_reglimit}">
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-body">
+			<button type="submit" name="submit" class="btn btn-success btn-sm">Сохранить настройки</button>
+		</div>
+	</div>
+</form>
+
+<script>
+	$.datetimepicker.setDateFormatter({
+          parseDate: function (date, format) {
+              var d = moment(date, format);
+              return d.isValid() ? d.toDate() : false;
+          },
+          formatDate: function (date, format) {
+              return moment(date).format(format);
+          },
+	});
+	  
+	$('#input_close_time').datetimepicker({
+		format:'d.m.Y H:i:s',
+		lang:'RU'
+	});
+</script>

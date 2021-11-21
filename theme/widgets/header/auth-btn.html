@@ -1,0 +1,16 @@
+<div class="dropdown dropdown-animate" data-toggle="hover">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img сlass="dropdown-icon-user" src="{sys_username_header}" alt="{sys_username} голова"> {sys_username}
+    </a>
+    <div class="dropdown-menu dropdown-menu-arrow mt-2" aria-labelledby="navbarDropdown">
+        <div class="p-lg-2">
+            <a class="dropdown-item" href="/profile"><i class="fas fa-user"></i> Профиль</a>
+            <a class="dropdown-item" href="/tops"><i class="fas fa-star"></i> Топ игроков</a>
+            <a class="dropdown-item" href="/profile#settings"><i class="fas fa-cogs"></i> Настройки</a>
+            <div class="dropdown-divider"></div>
+            <form action="/?mode=logout" method="post">
+                <button type="submit" class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Выйти из аккаунта</button>
+            </form>
+        </div>
+    </div>
+</div>

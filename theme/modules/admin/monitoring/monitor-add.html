@@ -1,0 +1,78 @@
+<div class="card">
+	<div class="card-header">
+		<div class="d-flex justify-content-between align-items-center">
+			<div>
+				<h6 class="mb-0"><i class="fas fa-server"></i> {page}</h6>
+			</div>
+		</div>
+	</div>
+</div>
+
+{cover}
+
+<div class="card">
+	<div class="card-body">
+		<form method="post" enctype="multipart/form-data">
+			<div class="form-group">
+				<label class="form-control-label">Название сервера в системе</label>
+				<div class="input-group input-group-merge">
+					<div class="input-group-prepend">
+						<span class="input-group-text"><i class="fas fa-server"></i></span>
+					</div>
+					<input type="text" class="form-control" name="title" value="{name}" placeholder="Название сервера" required>
+				</div>
+			</div>
+	
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="form-control-label">IP сервера</label>
+						<input type="text" class="form-control" name="ip" value="{ip}" required>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="form-control-label">Порт сервера</label>
+						<input type="text" class="form-control" name="port" value="{port}" required>
+					</div>
+				</div>
+			</div>
+	
+			<div class="form-group">
+				<label for="inputText">Описание сервера на странице сервера</label>
+				<textarea id="inputText" class="form-control" name="text" rows="3">{text}</textarea>
+			</div>
+	
+			<div class="form-group">
+				<label class="form-control-label">Моды сервера (через запятую)</label>
+				<div class="input-group input-group-merge">
+					<div class="input-group-prepend">
+						<span class="input-group-text"><i class="fas fa-sitemap"></i></span>
+					</div>
+					<input type="text" class="form-control" name="mods" value="{mods}" placeholder="MOD#1, MOD#2, MOD#3" required>
+				</div>
+			</div>
+	
+			<div class="form-group">
+				<label class="form-control-label">Заблокированный предметы на сервере (через запятую)</label>
+				<div class="input-group input-group-merge">
+					<div class="input-group-prepend">
+						<span class="input-group-text"><i class="fas fa-sitemap"></i></span>
+					</div>
+					<input type="text" class="form-control" name="itemban" value="{itemban}" placeholder="Блок шерсти, Блок булыжника, Блок земли" required>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="form-control-label">Обложка сервера</label>
+				<input type="file" name="cover" id="cover" class="custom-input-file" data-multiple-caption="files selected" multiple />
+				<label for="cover">
+					<i class="fa fa-upload"></i>
+					<span>Добавить обложку сервера</span>
+				</label>
+			</div>
+	
+			<button type="submit" class="btn btn-success btn-block mt-5" name="submit">{button}</button>
+		</form>
+	</div>		
+</div>

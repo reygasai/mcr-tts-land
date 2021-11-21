@@ -1,0 +1,26 @@
+<div id="layoutSidenav">
+    <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+                    {panel}
+                </div>
+            </div>
+            <div class="sb-sidenav-footer">
+                <div class="small">Вы авторизованы как:</div>
+                {sys_username}
+            </div>
+        </nav>
+    </div>
+    
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid">
+                <div class="card" style="background-color: #212832;">
+                    {breadcrumbs}
+                </div>
+                {a_content}
+            </div>
+        </main>
+    </div>
+</div>

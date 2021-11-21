@@ -1,0 +1,109 @@
+<div class="card">
+	<div class="card-header">
+		<div class="d-flex justify-content-between align-items-center">
+			<div>
+				<h6 class="mb-0"><i class="fas fa-mail-bulk"></i>Управление почтой</h6>
+			</div>
+		</div>
+	</div>
+</div>
+
+<nav class="nav nav-pills nav-pills-icon nav-justified mb-4">
+    <a class="nav-item nav-link py-3 bg-secondary-light " href="{admin_url}&do=settings&op=main">
+        <span class="d-block">
+			<i class="fas fa-sliders-h fa-2x"></i>
+        </span>
+        <span class="d-none d-sm-block mt-2">Основные</span>
+    </a>
+    <a class="nav-item nav-link py-3 bg-secondary-light" href="{admin_url}&do=settings&op=pagin">
+        <span class="d-block">
+            <i class="fas fa-ellipsis-h fa-2x"></i>
+        </span>
+        <span class="d-none d-sm-block mt-2">Пагинация</span>
+    </a>
+    <a class="nav-item nav-link py-3 active bg-dark-light" href="{admin_url}&do=settings&op=mail">
+        <span class="d-block">
+            <i class="fas fa-mail-bulk fa-2x"></i>
+        </span>
+        <span class="d-none d-sm-block mt-2">Почта</span>
+	</a>
+	<a class="nav-item nav-link py-3 bg-secondary-light" href="{admin_url}&do=settings&op=functions">
+        <span class="d-block">
+            <i class="fas fa-tools fa-2x"></i>
+        </span>
+        <span class="d-none d-sm-block mt-2">Функциональные</span>
+    </a>
+</nav>
+
+<form method="post">
+	<div class="card">
+		<div class="card-body">
+
+			<legend class="mb-4">Основные настройки</legend>
+
+			<div class="form-group">
+				<label class="control-label" for="input_from">От кого</label>
+				<input type="text" name="from" class="form-control" id="input_from" value="{mail_from}" placeholder="От кого было отправлено сообщение">
+			</div>
+
+			<div class="form-group">
+				<label class="control-label" for="input_from_name">Имя отправителя</label>
+				<input type="text" name="from_name" class="form-control" value="{mail_from_name}" id="input_from_name" placeholder="Имя отправителя">
+			</div>
+
+			<div class="form-group">
+				<label class="control-label" for="input_reply">E-Mail ответа</label>
+				<input type="text" name="reply" class="form-control" value="{mail_reply}" id="input_reply" placeholder="E-Mail отправителя">
+			</div>
+
+			<div class="form-group">
+				<label class="control-label" for="input_reply_name">Имя отправителя ответа</label>
+				<input type="text" name="reply_name" class="form-control" value="{mail_reply_name}" id="input_reply_name" placeholder="Имя отправителя ответа">
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-body">
+
+			<legend class="mb-4">Настройки SMTP</legend>
+
+			<div class="form-group">
+				<label class="control-label" for="input_smtp">Использовать SMTP</label>
+				<select name="smtp" id="input_smtp" class="form-control">
+					<option value="0">Нет</option>
+					<option value="1" {mail_smtp__option}>Да</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label" for="input_smtp_host">SMTP сервер</label>
+				<input type="text" class="form-control" name="smtp_host" value="{mail_smtp_host}" id="input_smtp_host" placeholder="Адрес SMTP сервера">
+			</div>
+
+			<div class="form-group">
+				<label class="control-label" for="input_smtp_user">Имя пользователя</label>
+				<input type="text" class="form-control" name="smtp_user" value="{mail_smtp_user}" id="input_smtp_user" placeholder="Имя пользователя SMTP сервера">
+			</div>
+
+			<div class="form-group">
+				<label class="control-label" for="input_smtp_pass">Пароль</label>
+				<input type="password" class="form-control" name="smtp_pass" value="{mail_smtp_pass}" id="input_smtp_pass" placeholder="Пароль пользователя SMTP сервера">
+			</div>
+
+			<div class="form-group">
+				<label class="control-label" for="input_smtp_tls">Использовать TLS</label>
+				<select name="smtp_tls" id="input_smtp_tls" class="form-control">
+					<option value="0">Нет</option>
+					<option value="1" {mail_smtptls__option}>Да</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-body">
+			<button type="submit" name="submit" class="btn btn-success btn-sm">Сохранить настройки</button>
+		</div>
+	</div>
+</form>

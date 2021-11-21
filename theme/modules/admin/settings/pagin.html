@@ -1,0 +1,158 @@
+<div class="card">
+	<div class="card-header">
+		<div class="d-flex justify-content-between align-items-center">
+			<div>
+				<h6 class="mb-0"><i class="fas fa-ellipsis-h"></i> Настройка пагинации</h6>
+			</div>
+		</div>
+	</div>
+</div>
+
+<nav class="nav nav-pills nav-pills-icon nav-justified mb-4">
+    <a class="nav-item nav-link py-3 bg-secondary-light" href="{admin_url}&do=settings&op=main">
+        <span class="d-block">
+			<i class="fas fa-sliders-h fa-2x"></i>
+        </span>
+        <span class="d-none d-sm-block mt-2">Основные</span>
+    </a>
+    <a class="nav-item nav-link py-3 active bg-dark-light" href="{admin_url}&do=settings&op=pagin">
+        <span class="d-block">
+            <i class="fas fa-ellipsis-h fa-2x"></i>
+        </span>
+        <span class="d-none d-sm-block mt-2">Пагинация</span>
+    </a>
+    <a class="nav-item nav-link py-3 bg-secondary-light" href="{admin_url}&do=settings&op=mail">
+        <span class="d-block">
+            <i class="fas fa-mail-bulk fa-2x"></i>
+        </span>
+        <span class="d-none d-sm-block mt-2">Почта</span>
+	</a>
+	<a class="nav-item nav-link py-3 bg-secondary-light" href="{admin_url}&do=settings&op=functions">
+        <span class="d-block">
+            <i class="fas fa-tools fa-2x"></i>
+        </span>
+        <span class="d-none d-sm-block mt-2">Функциональные</span>
+    </a>
+</nav>
+
+<form method="post">
+	<div class="card">
+		<div class="card-body">
+			<legend class="mb-4">Пользовательская часть</legend>
+
+			<div class="form-group">
+				<label for="input_arrows" class="form-control-label">Кол-во стрелок</label>
+				<input type="text" class="form-control" name="arrows" id="input_arrows" value="{pagin_arrows}" placeholder="Кол-во стрелок с каждой стороны">
+			</div>
+
+			<div class="form-group">
+				<label for="input_news" class="form-control-label">Новости</label>
+				<input type="text" class="form-control" name="news" value="{pagin_news}" id="input_news" placeholder="Кол-во новостей на одну страницу">
+			</div>
+
+			<div class="form-group">
+				<label for="input_comments" class="form-control-label">Комментарии</label>
+				<input type="text" class="form-control" name="comments" value="{pagin_comments}" id="input_comments" placeholder="Кол-во комментариев на одну страницу">
+			</div>
+
+			<div class="form-group">
+				<label for="input_search_news" class="form-control-label">Поиск по новостям</label>
+				<input type="text" class="form-control" name="search_news" value="{pagin_search_news}" id="input_search_news" placeholder="Кол-во новостей на одну страницу в поиске">
+			</div>
+
+			<div class="form-group">
+				<label for="input_search_comments" class="form-control-label">Поиск по комментариям</label>
+				<input type="text" class="form-control" name="search_comments" value="{pagin_search_comments}" id="input_search_comments" placeholder="Кол-во комментариев на одну страницу в поиске">
+			</div>
+		
+		</div>
+	</div>
+	
+	<div class="card">
+		<div class="card-body">
+
+			<legend class="mb-4">Панель управления</legend>
+
+			<div class="form-group">
+				<label for="input_adm_news" class="form-control-label">Новости</label>
+				<input type="text" class="form-control" name="adm_news" id="input_adm_news" value="{pagin_search_comments}" placeholder="Кол-во новостей в ПУ">
+			</div>
+
+			<div class="form-group">
+				<label for="input_adm_comments" class="form-control-label">Комментарии</label>
+				<input type="text" class="form-control" name="adm_comments" id="input_adm_comments" value="{pagin_adm_comments}" placeholder="Кол-во комментариев в ПУ">
+			</div>
+
+			<div class="form-group">
+				<label for="input_adm_news_cats" class="form-control-label">Категории новостей</label>
+				<input type="text" class="form-control" name="adm_news_cats" id="input_adm_news_cats" value="{pagin_adm_news_cats}" placeholder="Кол-во категорий новостей в ПУ">
+			</div>
+
+			<div class="form-group">
+				<label for="input_adm_news_views" class="form-control-label">Просмотров новости</label>
+				<input type="text" class="form-control" name="adm_news_views" id="input_adm_news_views" value="{pagin_adm_news_views}" placeholder="Кол-во просмотров новостей в ПУ">
+			</div>
+
+			<div class="form-group">
+				<label for="input_adm_news_votes" class="form-control-label">Голосов новости</label>
+				<input type="text" class="form-control" name="adm_news_votes" id="input_adm_news_votes" value="{pagin_adm_news_votes}" placeholder="Кол-во голосов новостей в ПУ">
+			</div>
+
+			<div class="form-group">
+				<label for="input_adm_menu" class="form-control-label">Пунктов меню</label>
+				<input type="text" class="form-control" name="adm_menu" id="input_adm_menu" value="{pagin_adm_menu}" placeholder="Кол-во пунктов меню сайта в ПУ">
+			</div>
+
+			<div class="form-group">
+				<label for="input_adm_menu_adm" class="form-control-label">Пункты меню ПУ</label>
+				<input type="text" class="form-control" name="adm_menu_adm" id="input_adm_menu_adm" value="{pagin_adm_menu_adm}" placeholder="Кол-во пункты меню ПУ в ПУ">
+			</div>
+
+			<div class="form-group">
+				<label for="input_adm_menu_groups" class="form-control-label">Группы меню</label>
+				<input type="text" class="form-control" name="adm_menu_groups" id="input_adm_menu_groups" value="{pagin_adm_menu_groups}" placeholder="Кол-во групп меню в ПУ">
+			</div>
+
+			<div class="form-group">
+				<label for="input_adm_menu_icons" class="form-control-label">Иконки меню</label>
+				<input type="text" class="form-control" name="adm_menu_icons" id="input_adm_menu_icons" value="{pagin_adm_menu_icons}" placeholder="Кол-во иконок меню в ПУ">
+			</div>
+
+			<div class="form-group">
+				<label for="input_adm_monitoring" class="form-control-label">Мониторинг</label>
+				<input type="text" class="form-control" name="adm_monitoring" id="input_adm_monitoring" value="{pagin_adm_monitoring}" placeholder="Кол-во серверов в мониторинге в ПУ">
+			</div>
+
+			<div class="form-group">
+				<label for="input_adm_users" class="form-control-label">Пользователи</label>
+				<input type="text" class="form-control" name="adm_users" id="input_adm_users" value="{pagin_adm_users}" placeholder="Кол-во пользователей в ПУ">
+			</div>
+
+			<div class="form-group">
+				<label for="input_adm_groups" class="form-control-label">Группы пользователей</label>
+				<input type="text" class="form-control" name="adm_groups" id="input_adm_groups" value="{pagin_adm_groups}" placeholder="Кол-во групп пользователей в ПУ">
+			</div>
+
+			<div class="form-group">
+				<label for="input_adm_permissions" class="form-control-label">Привилегии</label>
+				<input type="text" class="form-control" name="adm_permissions" id="input_adm_permissions" value="{pagin_adm_permissions}" placeholder="Кол-во привилегий в ПУ">
+			</div>
+
+			<div class="form-group">
+				<label for="input_adm_statics" class="form-control-label">Статические страницы</label>
+				<input type="text" class="form-control" name="adm_statics" id="input_adm_statics" value="{pagin_adm_statics}" placeholder="Кол-во статических страниц в ПУ">
+			</div>
+
+			<div class="form-group">
+				<label for="input_adm_logs" class="form-control-label">Логи</label>
+				<input type="text" class="form-control" name="adm_logs" id="input_adm_logs" value="{pagin_adm_logs}" placeholder="Кол-во логов в ПУ">
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-body">
+			<button type="submit" name="submit" class="btn btn-success btn-sm">Сохранить настройки</button>
+		</div>
+	</div>
+</form>

@@ -1,0 +1,318 @@
+.profile-box-left {
+  position: relative;
+  top: 30%;
+}
+
+.nav.profile {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: -15px;
+  margin-top: 20px;  
+  margin-bottom: 50px;
+}
+
+.profile-box .form-control {
+  background-color: #fdfdfd;
+  border: 1px solid #e0e6ed;
+}
+
+.profile-box .input-group-text {
+  background-color: #fdfdfd;
+  border: 1px solid #e0e6ed;   
+}
+
+.profile-box, .profile-box-skin, .actions-box {
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 20px;  
+  position: relative;
+}
+
+.profile-box.change-skin {
+  color: #fff;
+  background-image: url(../../../img/profile/plains.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 0px;
+}
+
+.profile-box.change-skin > h2 {
+  font-size: 17px;
+  color: #ffffff;
+  display: inline-block;
+  background: #1ea069;
+  padding: 0px 10px;
+  border-radius: 50px; 
+}
+
+.profile-box.change-chat > h2, .profile-box.settings > h2{
+  font-size: 17px;  
+}
+
+.profile-box > h2 {
+  font-size: 27px;
+  color: #3a4d64;
+  margin-bottom: 16px;
+  font-weight: bold;    
+}
+
+ul.profile-list {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+}
+
+ul.profile-list > li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+ul.profile-list > li.listed {
+  border-bottom: 2px dotted rgba(200, 205, 216, 0.26);
+  margin-bottom: 15px;   
+}
+
+ul.profile-list > li.listed:last-child {
+  margin-bottom: 0px; 
+}
+
+ul.profile-list > li > p {
+  margin: 0px;
+}
+
+ul.profile-list > li > p.last {
+  padding-bottom: 0px;
+}
+
+ul.profile-list > li > p.left-profile-username {
+  font-size: 27px;
+  color: #3a4d64;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.profile-icon-user {
+  text-align: center;
+  border: 10px solid #edeffc;
+  width: 120px;
+  border-radius: 100px;
+  height: 120px;
+  position: absolute;
+  top: -30px;
+  right: -30px;
+}
+
+.nav-link {
+    color: #3a4d64;
+}
+
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #36b37e;
+  transition: width .3s;
+  position: relative;
+  top: 1px;
+  border-radius: 100px;
+}
+  
+.nav-link.active, .nav-link:hover {
+  color: #36b37e;
+}
+  
+.nav-link:hover::after, .nav-link.active::after {
+  width: 100%;
+  transition: width .3s;
+}
+
+.profile-box-balance {
+  background-image: url(../../../img/profile/coins-profile.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+  color: #f8f8f8;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.profile-box-balance:hover {
+    transform: scale(1.03);
+}
+
+.profile-box-balance > h2 {
+  color: #efefef;
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.profile-box-balance > h2 > span {
+  color: #36b37e;
+  font-size: 33px;
+}
+
+.profile-box-balance > p {
+  margin: 0px;
+  color: rgba(255, 255, 255, 0.822);    
+}
+
+.profile-box-buttons {
+  text-align: center;
+}
+
+.profile-box-skin {
+  text-align: center;
+}
+
+#profile-box-skin {
+  margin-left: -12px;  
+}
+
+@font-face {
+  font-family: Pixel;
+  src: url(../../../webfonts/Minecraftia-Regular.ttf);
+}
+
+#profile-box-skin > .nick-name {
+  font-family: Pixel;
+  text-align: center;
+  margin-left: 18px;
+}
+
+.profile-box-title-section {
+  padding: 5px 20px 20px 10px;
+  display: block;
+  margin-bottom: 20px; 
+  text-align: right;
+}
+
+.profile-box-title-section > h2 {
+  font-size: 21px;
+  color: #ffffff;
+  margin-bottom: 16px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: right;
+  padding: 5px 15px;
+  border-radius: 50px;
+  background: #36b37e;
+}
+
+.drop-btn {
+  font-size: 10px;
+}
+
+.custom-input-file+label {
+  text-overflow: unset;
+  white-space: initial;
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  padding: .625rem 1.25rem;
+  border: 1px dashed rgba(255, 255, 255, 0.70);
+  border-radius: .25rem;
+  color: rgba(255, 255, 255, 0.70);
+  background-color: transparent;
+  outline: none;
+  margin: 0;
+  margin-bottom: 17px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.skin-uploader, .cloak-uploader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.skin-uploader i.upload, .cloak-uploader i.upload {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.custom-input-file+label:hover, .custom-input-file.has-focus+label, .custom-input-file:focus+label {
+  color: rgba(255, 255, 255, 1);
+  border: 1px dashed rgba(255, 255, 255, 1);
+  background-color: unset;
+}
+
+.modal-box-center.promo i {
+  font-size: 63px;
+  margin-right: 30px;
+  color: #36b37e;
+}
+
+.modal-box-center.promo a {
+  color: #36b37e;
+}
+
+.shop-box {
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.shop-box-content {
+  margin-bottom: 20px;
+}
+
+.shop-title {
+  width: 40%;
+}
+
+.shop-title .name {
+  border-radius: 50px;
+  background: #36b37e;
+  color: #fff;
+  padding: 0px 10px;
+}
+
+.server-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.shop-description {
+  text-align: right;
+  font-size: 13px;
+}
+
+.actions-box.allbuy, .actions-box.lastbuy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.actions-box.allbuy > i, .actions-box.lastbuy > i {
+  font-size: 63px;
+  color: #36b37e;
+  margin-bottom: 20px;
+}
+
+.actions-box.allbuy > p, .actions-box.lastbuy > p {
+  background: #edeffc;
+  padding: 9px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  color: #3a4d64;
+}

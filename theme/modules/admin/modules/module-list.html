@@ -1,0 +1,52 @@
+<div class="card">
+	<div class="card-header">
+		<div class="d-flex justify-content-between align-items-center">
+			<div>
+				<h6 class="mb-0"><i class="fas fa-sitemap"></i> Управление модулями</h6>
+			</div>
+		</div>
+	</div>
+</div>
+
+<form method="post" class="panel-modules" action="{admin_url}&do=modules&op=delete">
+	<div class="card">
+		<div class="table-responsive">
+			<table class="table table-striped">
+				<thead class="table-light">
+					<tr>
+						<th class="sort-trigger">Статус</th>
+						<th class="sort-trigger">Название</th>
+						<th class="sort-trigger">Автор</th>
+						<th class="sort-trigger">Версия</th>
+						<th class="action float-right">
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" data-for="check-input" id="check-input">
+								<label class="custom-control-label" for="check-input"></label>
+							</div>
+						</th>
+					</tr>
+				</thead>
+		
+				<tbody>
+					{modules}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="card px-2 py-2 d-flex flex-row align-items-center justify-content-between">
+		<div class="left-act"></div>
+		<div class="right-act">
+			<div class="btns">
+				<a data-for="check-input" data-link="{admin_url}&do=modules&op=edit&id=" href="#" class="btn btn-animated btn-info btn-animated-x btn-sm edit">
+					<span class="btn-inner--visible">Редактировать</span>
+					<span class="btn-inner--hidden">
+						<i class="fa fa-pencil"></i>
+					</span>
+				</a>
+				<button class="btn btn-success btn-sm" id="enable" data-for="check-input"><i class="fa fa-play"></i></button>
+				<button class="btn btn-danger btn-sm" id="disable" data-for="check-input"><i class="fa fa-pause"></i></button>
+			</div>
+		</div>
+	</div>
+</form>

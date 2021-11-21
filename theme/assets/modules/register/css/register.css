@@ -1,0 +1,79 @@
+.register {
+  height: 100vh;
+}
+
+.register-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.register-content {
+  background-color: rgba(40, 48, 59, 0.75);
+  z-index: 1;
+  padding: 20px;
+  height: 100vh;
+  margin-right: -10px;
+}
+
+.register-content a.navbar-brand > img {
+    width: 150px;
+    display: block;
+    cursor: pointer;
+}
+
+.register-content label.form-control-label {
+    color: #f2f2f2;
+}
+
+.register-content .input-group-merge .input-group-text {
+    color: #d6dde6;
+    background-color: #273444;
+    border: 1px solid #273444;
+}
+
+.register-content .form-control {
+    color: #d6dde6;
+    background-color: #273444;
+    border: 1px solid #273444;
+}
+
+@-webkit-keyframes autofill {
+    to {
+      color: #d6dde6;
+      background: #273444;
+    }
+  }
+
+  input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+  }
+
+.register-content .form-control a:hover {
+  color: #36b37e;
+}
+
+.register-content .btn-primary-green {
+    color: #fff;
+    background-color: #36b37e;
+    border-color: #36b37e;
+}
+
+.register-content .btn-primary-green:hover {
+    color: #fff;
+    background-color: #2d9268;
+    border-color: #2d9268;
+}
+
+.register-content .custom-control-label {
+    cursor: pointer;
+}
+
+.register-content .custom-control-label:before {
+    pointer-events: none;
+    background-color: #4b5b71;
+    border: 0 solid #4b5b71;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}

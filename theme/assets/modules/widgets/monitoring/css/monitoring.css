@@ -1,0 +1,101 @@
+.server-element {
+  position: relative;
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.server-element > .header-box > .header {
+  color: #353535;
+  padding: 0px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 9px;
+}
+
+.server-element > .header-box > .header.online {
+  border: 2.5px solid #36b37e;
+}
+
+.server-element > .header-box > .header.offline {
+  border: 2.5px solid #d53b3b;
+}
+
+.server-element > .header-box > span.status::before {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f192";
+  display: inline-block;
+  position: absolute;
+  font-size: 16px;
+  z-index: 0;
+  top: 19px;
+  right: 19px;
+}
+
+.server-element > .header-box > span.status.online::before {
+  color: #36b37e;
+}
+
+.server-element > .header-box > span.status.offline::before {
+  color: #d53b3b;
+}
+
+.server-element > .servers-data > .stats {
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-top: 9px;
+}
+
+.server-element > .servers-data > .stats.online::before {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f0c0";
+  display: inline-block;
+  padding-right: 8px;
+  font-weight: 900;
+}
+
+.server-element > .servers-data > .stats.offline::before {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f011";
+  display: inline-block;
+  padding-right: 8px;
+  font-weight: 900;
+}
+
+.server-element > .servers-data > .progress {
+  box-shadow: unset;
+}
+
+.server-element > .servers-data .progress-bar.online {
+  background-color: #36b37e;
+}
+
+.server-element > .servers-data .progress-bar.offline {
+  background-color: #d53b3b;
+}
+
+.online-box {
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: block;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.online-box.online {
+  background: #36b37e;
+}
+
+.online-box.offline {
+  background: #d13e1d;
+}
+
+.online-box > p {
+  margin-bottom: 0px;
+}

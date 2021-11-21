@@ -1,0 +1,14 @@
+<div class="col-md-6" data-server-id="{id}" data-server-online="{online}" data-server-slots="{slots}" data-server-status="{status}">
+  <div class="server-element">
+    <div class="header-box d-flex flex-row align-items-center justify-content-between w-100">
+      <div class="header {status}">{title}</div>
+      <span class="status {status}"></span>
+    </div>
+    <div class="servers-data w-100">
+      <div class="stats {status}">Игроков: {online} из {slots}</div>
+      <div class="progress">
+        <div class="progress-bar {status}" style="width: {progress}%"></div>
+      </div>
+    </div>
+  </div>
+</div>

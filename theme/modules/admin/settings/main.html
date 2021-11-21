@@ -1,0 +1,175 @@
+<div class="card">
+	<div class="card-header">
+		<div class="d-flex justify-content-between align-items-center">
+			<div>
+				<h6 class="mb-0"><i class="fas fa-sliders-h"></i> Основные настройки сайта</h6>
+			</div>
+		</div>
+	</div>
+</div>
+
+<nav class="nav nav-pills nav-pills-icon nav-justified mb-4">
+    <a class="nav-item nav-link py-3 active bg-dark-light" href="{admin_url}&do=settings&op=main">
+        <span class="d-block">
+			<i class="fas fa-sliders-h fa-2x"></i>
+        </span>
+        <span class="d-none d-sm-block mt-2">Основные</span>
+    </a>
+    <a class="nav-item nav-link py-3 bg-secondary-light" href="{admin_url}&do=settings&op=pagin">
+        <span class="d-block">
+            <i class="fas fa-ellipsis-h fa-2x"></i>
+        </span>
+        <span class="d-none d-sm-block mt-2">Пагинация</span>
+    </a>
+    <a class="nav-item nav-link py-3 bg-secondary-light" href="{admin_url}&do=settings&op=mail">
+        <span class="d-block">
+            <i class="fas fa-mail-bulk fa-2x"></i>
+        </span>
+        <span class="d-none d-sm-block mt-2">Почта</span>
+	</a>
+	<a class="nav-item nav-link py-3 bg-secondary-light" href="{admin_url}&do=settings&op=functions">
+        <span class="d-block">
+            <i class="fas fa-tools fa-2x"></i>
+        </span>
+        <span class="d-none d-sm-block mt-2">Функциональные</span>
+    </a>
+</nav>
+		 
+<form method="post">
+	<div class="card">
+		<div class="card-body">
+			<legend class="mb-4">Основные настройки</legend>
+			<div class="row">
+				<div class="col-md-8">
+					<div class="form-group">
+						<label class="form-control-label">Название сайта</label>
+						<input type="text" class="form-control" name="s_name" value="{name_web}" placeholder="Введите название сайта">
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label class="form-control-label">Главный модуль</label>
+						<input type="text" class="form-control" disabled name="s_dpage" value="main" placeholder="Введите название главного модуля">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="form-control-label">Описание сайта</label>
+						<input type="text" class="form-control" name="s_about" value="{about_web}" placeholder="Введи описание сайта">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="form-control-label">Keywords</label>
+						<input type="text" class="form-control" name="s_keywords" value="{keywords_web}">
+					</div>
+				</div>	
+			</div>
+			<div class="form-group">
+				<label class="form-control-label" for="input_log">Лог ошибок</label>
+				<select name="log" class="form-control" id="input_log">
+					<option value="0">Нет</option>
+					<option value="1" {log}>Да</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label class="form-control-label" for="input_debug">Дебаг (не включать на production)</label>
+				<select name="debug" class="form-control" id="input_debug">
+					<option value="0">Нет</option>
+					<option value="1" {debug}>Да</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label class="form-control-label" for="input_reg_accept">Подтверждение регистрации по почте</label>
+				<select name="reg_accept" class="form-control" id="input_reg_accept">
+					<option value="0">Нет</option>
+					<option value="1" {reg_accept}>Да</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label class="form-control-label" for="input_captch">Капча</label>
+				<select name="captcha" class="form-control" id="input_captch">
+					{captcha}
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-body">	
+			<legend class="mb-4">Настройка авторизации</legend>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="form-control-label">Количество попыток авторизации</label>
+						<input type="number" class="form-control" name="auth_attempt" value="{auth_attempt}" placeholder="Введите количество попыток авторизации">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="form-control-label">Время бана в секундах при привышении попыток авторизаций</label>
+						<input type="number" class="form-control" name="auth_time_attempt" value="{auth_time_attempt}">
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-body">	
+			<legend class="mb-4">Настрока ReCaptcha</legend>
+			<div class="form-group">
+				<label class="form-control-label" for="input_rc_public">Публичный ключ ReCaptcha V2</label>
+				<input type="text" class="form-control" name="rc_public" value="{rc_public}" id="input_rc_public">
+			</div>
+			<div class="form-group">
+				<label class="form-control-label" for="input_rc_private">Приватный ключ ReCaptcha V2</label>
+				<input type="text" class="form-control" name="rc_private" value="{rc_private}" id="input_rc_private">
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-body">	
+			<legend class="mb-4">Настройка публичный ссылок</legend>
+			<div class="form-group">
+				<label class="form-control-label" for="input_vk_link">Ссылка на группу ВКонтакте</label>
+				<input type="text" class="form-control" name="vk_link" value="{vk_link}" id="input_vk_link">
+			</div>
+
+			<div class="form-group">
+				<label class="form-control-label" for="input_discord_link">Ссылка на Discord канал</label>
+				<input type="text" class="form-control" name="discord_link" value="{discord_link}" id="input_discord_link">
+			</div>
+
+			<div class="form-group">
+				<label class="form-control-label" for="input_youtube_link">Ссылка на YouTube канал</label>
+				<input type="text" class="form-control" name="youtube_link" value="{youtube_link}" id="input_youtube_link">
+			</div>
+			
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="form-control-label" for="jar">Ссылка на .JAR лаунчер</label>
+						<input type="text" class="form-control" name="jar" value="{jar}" id="jar">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="form-control-label" for="exe">Ссылка на .EXE лаунчер</label>
+						<input type="text" class="form-control" name="exe" value="{exe}" id="exe">
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-body">
+			<button type="submit" name="submit" class="btn btn-success btn-sm">Сохранить настройки</button>
+		</div>
+	</div>
+
+</form>

@@ -1,0 +1,128 @@
+.servers {
+  height: 50vh;
+}
+
+.server-container {
+  position: relative;
+  top: -14%;
+}
+
+.servers > .background.overlay {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50vh;   
+}
+
+.server-box-left::before {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f04b";
+  display: inline-block;
+  position: absolute;
+  font-size: 160px;
+  color: rgba(255, 255, 255, 0.03);
+  transform: rotate(219deg);
+  z-index: 0;
+}
+
+.server-box-left > h1 {
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.server-box-left > h1 > span {
+  color: #36b37e;
+}
+
+.server-box-left > p {
+  color: #ffffff;
+  font-size: 16.5px;
+}
+
+.server-box-right {
+  height: 100%;
+}
+
+.server-box-right > .server-online, .server-box-right > .server-version {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.server-online > span, .server-version > span {
+    font-size: 11px;
+    margin-bottom: 10px;
+    background: #3aaf7d;
+    padding: 1px 5px;
+    margin-top: 9px;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.server-online > i, .server-version > i {
+    font-size: 60px;
+    color: #fff;
+}
+
+.server-online > p, .server-version > p {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.info-box-left > .description p > span {
+    color: #f2f2f2;
+    font-weight: 600;
+    background: #36b37e;
+    padding: 4px 10px;
+    margin: 5px 10px 5px 0px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.no-players {
+    text-align: center;
+    color: #fff;
+    background: #c33c32;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.players-online {
+    text-align: center;
+    background: #f8f8f8;
+    padding: 10px;
+    border-radius: 10px;
+    height: 600px;
+    overflow: auto;
+}
+
+.player-element {
+    background-color: #edeffc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.player-element > img {
+    width: 50px;
+}
+
+.player-element > p {
+    margin-bottom: 0px;
+    color: #ffffff;
+    background: #36b37e;
+    padding: 1px 13px;
+    border-radius: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-left: 10px;
+}

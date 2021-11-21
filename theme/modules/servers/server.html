@@ -1,0 +1,51 @@
+<div class="container">
+  <section class="servers d-flex flex-column justify-content-end align-items-center">
+      <div class="background overlay" style="background-image: url(/uploads/servers/covers/{server_cover});"></div>
+      <div class="container server-container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="server-box-left d-flex flex-column justify-content-center align-items-start">
+              <h1><span>{server_title}</span> сервер</h1>
+              <p>На данной странице расположено полноценное описание данного сервера. Вы сможете ознакомится как с игровыми модификациями сервера, так и с его общей информацией</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="server-box-right d-flex flex-row justify-content-end align-items-center">
+              <div class="server-online">
+                <i class="fas fa-users"></i>
+                <span>Онлайн сервера</span>
+                <p>{server_online}</p>
+              </div>
+              <div class="server-version">
+                <i class="fas fa-clipboard-list"></i>
+                <span>Версия сервера</span>
+                <p>1.7.10</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+</div>
+<section id="information">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="info-box-left d-flex flex-column align-items-start">
+            <h1>Информация о сервере</h1>
+            <div class="description">
+              <h3><i class="fas fa-info-circle"></i> Полное описание сервера</h3>
+              <p>{server_text}</p>
+            </div>
+            <div class="description">
+              <h3><i class="fas fa-info-circle"></i> Модификации и дополнения</h3>
+              <p>{server_mods}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          {server_players}
+        </div>
+      </div>
+    </div>
+</section>

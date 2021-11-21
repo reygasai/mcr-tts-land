@@ -1,0 +1,322 @@
+<div class="container">
+  <section class="singlepage d-flex justify-content-center align-items-center">
+    <div class="background singlepage"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10">
+          <div class="profile-box-left hero-box-left d-flex flex-column justify-content-center align-items-start">
+            <h1>Личный <span>кабинет</span></h1>
+            <p>Вы находитесь в личном кабинете вашего персонажа. Тут вы сможете изменить облик своего персонажа или перейти в магазин</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<section id="information">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="profile-box">
+          <img class="profile-icon-user" src="{profile_header_username}" alt="{sys_username} голова">
+          <ul class="profile-list">
+            <li>
+              <p class="left-profile-username"><i class="fas fa-user"></i> Приветствуем, {sys_username}</p>
+              <p class="right-top"></p>
+            </li>
+            <li class="listed">
+              <p class="left"><i class="fas fa-calendar-alt"></i> Дата регистрации</p>
+              <p class="right-top">{profile_regdate}</p>
+            </li>
+            <li class="listed">
+              <p class="left"><i class="fas fa-clock"></i> Последнее действие</p>
+              <p class="right">{profile_actdate}</p>
+            </li>
+            <li class="listed">
+              <p class="left"><i class="fas fa-server"></i> Последний игровой сервер</p>
+              <p class="right">{profile_lastserver}</p>
+            </li>
+            <li class="listed">
+              <p class="left"><i class="fas fa-clipboard-list"></i> Последий IP</p>
+              <p class="right">{profile_lastip}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="d-flex flex-column justify-content-center h-100">
+          <a class="profile-box-balance" data-toggle="modal" data-target="#pay">
+            <h2><span>{profile_usermoney}</span> коин.</h2>
+            <p>Нажмите сюда для быстрого пополнения вашего счета</p>
+          </a>
+          <div class="profile-box-buttons">
+            <button type="button" data-toggle="modal" data-target="#promocode" class="btn-sm btn btn-outline-success rounded-pill hover-translate-y-n3"><i class="fas fa-cut"></i> Активация кода</button>
+            <button type="button" class="btn-sm btn btn-outline-info rounded-pill hover-translate-y-n3"><i class="fas fa-hands-helping"></i> Помощь</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="nav profile" id="myTab">
+      <a class="nav-link active" id="main-tab" data-toggle="tab" href="#main"><i class="fas fa-user"></i> Ваш персонаж</a>
+      <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings"><i class="fas fa-sliders-h"></i> Настройки и безопасность</a>
+      <a class="nav-link" id="privilege-tab" data-toggle="tab" href="#privilege"><i class="fas fa-shopping-cart"></i> Привилегии</a>
+      <a class="nav-link" id="vote-tab" data-toggle="tab" href="#vote"><i class="fas fa-vote-yea"></i> Голосование</a>
+      <a class="nav-link" id="actions-tab" data-toggle="tab" href="#actions" href="#"><i class="fas fa-list-ol"></i> Действия</a>
+      <a class="nav-link" href="#pay" data-toggle="modal" data-target="#pay"><i class="fas fa-money-check-alt"></i> Пополнение счета</a>
+    </nav>
+
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="main">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="profile-box-skin">
+              <div class="skin-block" data-url="{profile_dataskin}" data-cape="{profile_datacloak}">
+                <div id="profile-box-skin">
+                  <div class="nick-name">{sys_username}</div>
+                </div>
+                <form method="POST">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <button class="btn btn-outline-danger btn-sm rounded-pill drop-btn" name="del-skin" value="1"><i class="fas fa-trash"></i> Удалить скин</button>
+                    </div>
+                    <div class="col-md-6">
+                      <button class="btn btn-outline-danger btn-sm rounded-pill drop-btn" name="del-cloak" value="1"><i class="fas fa-trash"></i> Удалить плащ</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-9">
+            <div class="profile-box-title-section">
+              <h2><i class="fas fa-user"></i> Управление персонажом</h2>
+              <p>Хотите подчеркнуть свою индивидуальность и выглядеть по-настоящему круто? Персонализируйте Вашего игрового персонажа и загрузите скин всего в два клика! Если вам надоел ваш серый и однообразный чат, вы сможете изменить настройки
+                вашего чата в настройках</p>
+            </div>
+            <div class="row d-flex">
+              <div class="col-md-6">
+                <div class="profile-box change-skin h-100">
+                  <h2><i class="fa fa-upload"></i> Загрузка скина или плаща</h2>
+                  <div class="row">
+                    <div class="col-md-6 text-center">
+                      <form class="skin-uploader" enctype="multipart/form-data" method="POST">
+                        <input type="file" id="skin-upload" name="skin" class="custom-input-file" title="Загрузить скин">
+                        <label for="skin-upload">
+                          <i class="fa fa-upload upload"></i>
+                          <span>Нажмите или перетащите скин</span>
+                        </label>
+                        <button class="btn btn-success btn-sm rounded-pill"><i class="fa fa-upload"></i> Загрузка скина</button>
+                      </form>
+                    </div>
+                    <div class="col-md-6 text-center">
+                      <form class="cloak-uploader" enctype="multipart/form-data" method="POST">
+                        <input type="file" id="cloak-upload" name="cloak" class="custom-input-file" title="Загрузить плащ">
+                        <label for="cloak-upload">
+                          <i class="fa fa-upload upload"></i>
+                          <span>Нажмите или перетащите плащ</span>
+                        </label>
+                        <button class="btn btn-success btn-sm rounded-pill"><i class="fa fa-upload"></i> Загрузка плаща</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="profile-box change-chat h-100">
+                  <h2>Управление чатом</h2>
+                  <div class="d-flex justify-content-center align-items-center h-100">
+                    Тут скоро будут функции управления чатом ;)
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="settings">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="profile-box settings">
+              <h2><i class="fas fa-lock"></i> Изменение пароля</h2>
+              <div data-form="update_password">
+                <div class="form-group mb-4">
+                  <label class="form-control-label">Старый пароль</label>
+                  <div class="input-group input-group-merge">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="far fa-key"></i></span>
+                    </div>
+                    <input type="password" name="old_password" class="form-control" id="input-password-oldpass" placeholder="Введите старый пароль" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group mb-4">
+                      <label class="form-control-label">Новый пароль</label>
+                      <div class="input-group input-group-merge">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="far fa-key"></i></span>
+                        </div>
+                        <input type="password" name="password" class="form-control" id="input-password-newpass" placeholder="Введите новый пароль" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group mb-4">
+                      <label class="form-control-label">Повторите новый пароль</label>
+                      <div class="input-group input-group-merge">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="far fa-key"></i></span>
+                        </div>
+                        <input type="password" name="password_repeat" class="form-control" id="input-password-repass" placeholder="Введите новый пароль" required>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-4 d-flex">
+                  <button type="button" data-trigger="submit" class="btn btn-sm btn-success btn-icon rounded-pill">
+                    <span class="btn-inner--text"><i class="fas fa-lock"></i> Изменить пароль от аккаунта</span>
+                    <span class="btn-inner--icon"><i class="far fa-long-arrow-alt-right"></i></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="profile-box-title-section">
+              <h2><i class="fas fa-sliders-h"></i> Настройки и безопасность аккаунта</h2>
+              <p>Не пренебрегайте безопасностью Вашего аккаунта, не используйте один и тот же пароль на разных проектах во избежании взлома. Для большей защищенности, используйте двухфакторную авторизацию</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="privilege">
+        <div class="profile-box-title-section">
+          <h2><i class="fas fa-shopping-cart"></i> Привилегии (донат-услуги)</h2>
+          <p>На данной странице личного кабинета вы сможете приобрести донат-услуги (привилегию) на интересующем вас сервере. </p>
+        </div>
+        <div class="shop-box selected-server mb-3" style="display:none"><button class="btn btn-primary"><i class="fa fa-arrow-left"></i></button> <span class="title">LavaServer</span></div>
+        <div class="server-list row">
+          {profile_servers}
+        </div>
+        <div class="group-list row">
+          {profile_groups}
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="vote">
+        голосования
+      </div>
+
+      <div class="tab-pane fade" id="actions">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="actions-box allbuy">
+              <i class="fas fa-coins"></i>
+              <p>Сумма всех покупок за месяц cоставляет 400 коин.</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="actions-box lastbuy">
+              <i class="fas fa-shopping-bag"></i>
+              <p>Покупка 64x Земля на сервере SERVER #1</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="profile-box-title-section">
+              <h2><i class="fas fa-sliders-h"></i> Настройки и безопасность аккаунта</h2>
+              <p>Не пренебрегайте безопасностью Вашего аккаунта, не используйте один и тот же пароль на разных проектах во избежании взлома. Для большей защищенности, используйте двухфакторную авторизацию</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="actions-box">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Активация промокода -->
+<div class="modal fade" id="promocode">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="modal-box-center promo d-flex flex-row align-items-center justify-content-between">
+          <i class="fas fa-gifts"></i>
+          <p>Вы можете использовать промокоды найденные в нашем <a href="https://vk.com/ttsms">оффициальном сообществе ВКонтакте</a> или на других наших ресурсах, чтобы получить случайный приз! Все призы зачисляются на ваш личный счет, и они могут
+            быть использованы для покупки привилегий, групп и т.д.</p>
+        </div>
+        <div data-form="giftcode">
+          <div class="row d-flex flex-row align-items-center">
+            <div class="col-md-8">
+              <div class="form-group mb-4">
+                <label class="form-control-label">Введите промокод для использования</label>
+                <div class="input-group input-group-merge">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-gifts"></i></span>
+                  </div>
+                  <input type="text" name="giftcode" class="form-control" placeholder="AAAA-AAAA-AAAA-AAAA" >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <button type="button" data-trigger="submit" class="btn mt-1 btn-sm btn-success btn-icon rounded-pill">
+                <span class="btn-inner--text">Использовать промокод</span>
+                <span class="btn-inner--icon"><i class="far fa-long-arrow-alt-right"></i></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Пополнение счета -->
+<div class="modal fade" tabindex="-1" id="pay">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        Пополнение счета
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/theme/assets/modules/profile/js/skin.js"></script>

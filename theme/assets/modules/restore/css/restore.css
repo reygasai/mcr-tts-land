@@ -1,0 +1,25 @@
+.restore-box {
+    background: #fefefe;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 2;
+    position: relative;
+}
+
+.restore-box h2 {
+    font-weight: bold;
+    color: #262c38;
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+
+.restore-box h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 6px;
+    background: #36b37e;
+    position: relative;
+    top: 0px;
+    border-radius: 100px;
+}
